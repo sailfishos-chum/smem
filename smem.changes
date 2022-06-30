@@ -1,0 +1,17 @@
+* Thu May 12 2022 Nephros <sailfish@nephros.org> 1.5-6
+- move to OBS/chum
+
+* Sat Jan  9 2021 Nephros <sailfish@nephros.org> 1.5-5
+- fix python3 dependency
+- set a proper filename and path for pie/bar image output
+- compile and bundle smemcap tool
+- completely pointlessly overcomplicate things by using autotools
+
+* Sat Jan  9 2021 Nephros <sailfish@nephros.org> 1.5-4
+- set a proper filename and path for pie/bar image output
+- compile and bundle smemcap tool
+- completely pointlessly overcomplicate things by using autotools
+
+* Fri Jan  8 2021 Nephros <sailfish@nephros.org> 1.5-3
+- compile and bundle smemcap tool as well
+- completely pointlessly overcomplicate things by using autotools

@@ -1,0 +1,49 @@
+Name: smem
+Summary: Reports physical memory usage
+Version: 1.5
+Release: 6
+Group: Applications/System
+License: GPLv2
+URL: https://www.selenic.com/smem/
+SCM: hg://www.selenic.com/repo/smem/
+Sources:
+    # https://selenic.com/repo/smem/archive/1.5.tar.bz2
+    - '%{name}-%{version}.tar.bz2'
+Description: |
+     smem is a tool that can give numerous reports on memory usage on Linux
+     systems. Unlike existing tools, smem can report proportional set size
+     (PSS), which is a more meaningful representation of the amount of
+     memory used by libraries and applications in a virtual memory system.
+
+     %if "%{?vendor}" == "chum"
+     Type: console-application
+     PackagerName: nephros
+     Categories:
+      - System
+     Custom:
+       PackagingRepo: http://gitlab.com/nephros/openrepos-smem
+     Url:
+       Homepage: https://www.selenic.com/smem/
+     %endif
+
+
+
+Patches:
+    - SFOS.patch
+    - autotoolify.patch
+PkgBR:
+    - autoconf
+    - automake
+Requires:
+    - python3-base
+Provides:
+    - openrepos-smem = %{version}-%{release}
+Obsoletes:
+    - openrepos-smem <= %{version}
+#BuildArch: noarch
+#NoSetup: true
+SetupOptions: '-q -n %{name}-%{version}'
+Files:
+  - '%{_bindir}/smem'
+  - '%{_bindir}/smemcap'
+
