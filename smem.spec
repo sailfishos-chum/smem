@@ -22,7 +22,7 @@ Requires:   python3-base
 BuildRequires:  autoconf
 BuildRequires:  automake
 Provides:   openrepos-smem = %{version}-%{release}
-Obsoletes:   openrepos-smem <= %{version}
+Obsoletes:   openrepos-smem < %{version}
 
 %description
 smem is a tool that can give numerous reports on memory usage on Linux
@@ -33,10 +33,11 @@ memory used by libraries and applications in a virtual memory system.
 %if "%{?vendor}" == "chum"
 Type: console-application
 PackagerName: nephros
+DeveloperName: Matt Mackall
 Categories:
  - System
 Custom:
-  PackagingRepo: http://gitlab.com/nephros/openrepos-smem
+  PackagingRepo: http://gitlab.com/sailfishos-chum/smem
 Url:
   Homepage: https://www.selenic.com/smem/
 %endif

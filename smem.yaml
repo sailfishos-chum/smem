@@ -18,10 +18,11 @@ Description: |
      %if "%{?vendor}" == "chum"
      Type: console-application
      PackagerName: nephros
+     DeveloperName: Matt Mackall
      Categories:
       - System
      Custom:
-       PackagingRepo: http://gitlab.com/nephros/openrepos-smem
+       PackagingRepo: http://gitlab.com/sailfishos-chum/smem
      Url:
        Homepage: https://www.selenic.com/smem/
      %endif
@@ -39,7 +40,7 @@ Requires:
 Provides:
     - openrepos-smem = %{version}-%{release}
 Obsoletes:
-    - openrepos-smem <= %{version}
+    - openrepos-smem < %{version}
 #BuildArch: noarch
 #NoSetup: true
 SetupOptions: '-q -n %{name}-%{version}'

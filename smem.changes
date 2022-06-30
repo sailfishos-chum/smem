@@ -1,3 +1,7 @@
+* Thu Jun 30 2022 Nephros <sailfish@nephros.org> 1.5-7
+- move packaging repo to github.com/sailfishos-chum/smem.git
+- fix Obsoletes:
+
 * Thu May 12 2022 Nephros <sailfish@nephros.org> 1.5-6
 - move to OBS/chum
 
